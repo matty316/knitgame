@@ -9,8 +9,9 @@ struct App *app;
 
 void initApp(void) {
     InitWindow(WIDTH, HEIGHT, "knitgame");
-    ToggleFullscreen();
+    SetWindowState(FLAG_WINDOW_HIGHDPI);
     int display = GetCurrentMonitor();
+    ToggleFullscreen();
     SetWindowSize(GetMonitorWidth(display), GetMonitorHeight(display));
     SetTargetFPS(60);
 
